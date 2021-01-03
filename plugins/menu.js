@@ -22,20 +22,20 @@ https://Instagram.com/devjavastudios
 ${_p}menu
 
 *「 DIVERSÃO MENU 」*
-${_p}qr <teks>
-${_p}stiker (foto)
+${_p}qrcode <texto>
+${_p}figurinha (foto)
 ${_p}bucin
 ${_p}ss (website)
 *✨Entre no grupo do LightBot Para Saber Das novidades do bot!✨*
 
 *「 GRUPO 」*
-${_p}add (Número)
-${_p}kick @menção
-${_p}promote @menção
-${_p}demote @menção
-${_p}linkgrup
-${_p}anúncio <teks>
-${_p}listonline [groupid]
+${_p}adicionar (Número)
+${_p}ban @menção
+${_p}promoveradm @menção
+${_p}rebaixar @menção
+${_p}link
+${_p}anúncio <texto>
+${_p}listaonline [groupoid]
 
 
 *「  Experimental  」*
