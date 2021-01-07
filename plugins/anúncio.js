@@ -1,20 +1,12 @@
-let { MessageType } = require('@adiwajshing/baileys')
-
-let handler = async (m, { conn, args }) => {
-  let users = (await conn.groupMetadata(m.chat)).participants.map(u => u.jid)
-  conn.sendMessage(m.chat, args.join` `, MessageType.extendedText, { contextInfo: { mentionedJid: users } })
-}
-handler.command = /^(anúncio|anunciar|hiddentag|hidetag)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = true
-handler.private = false
-
-handler.admin = true
-handler.botAdmin = false
-
-handler.fail = null
-
-module.exports = handler
-
+case 'chamada':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					members_id = []
+					teks = (args.length > 1) ? body.slice(8).trim() : ''
+					teks += '\n\n'
+					for (let mem of groupMembers) {
+						teks += `*#* @${mem.jid.split('@')[0]}\n`
+						members_id.push(mem.jid)
+					}
+					mentions(teks, members_id, true)
+					break
